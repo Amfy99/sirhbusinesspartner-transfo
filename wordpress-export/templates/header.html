@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HRIS Business Partner spécialisée en transformation SIRH. Expertise Workday, SAP SuccessFactors, gouvernance et conduite du changement.">
+    <meta name="keywords" content="HRIS, Workday, SAP SuccessFactors, SIRH, Transformation RH, Gouvernance">
+    <title>Amandine Ferey | HRIS Specialist - Workday & SAP SuccessFactors Expert</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ============================================
+     HEADER / NAVIGATION
+     
+     WordPress Notes:
+     - Convert to wp_nav_menu()
+     - Make sticky on scroll (add class .sticky-header)
+     - Mobile menu toggle with hamburger icon
+     ============================================ -->
+
+<header class="site-header" role="banner">
+    <div class="container-main">
+        <nav class="main-navigation" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <!-- Logo / Site Title -->
+                <div class="site-branding">
+                    <a href="/" class="site-title">
+                        <span class="site-name">Amandine Ferey</span>
+                        <span class="site-tagline">HRIS Specialist</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="primary-menu">
+                    <li class="menu-item current-menu-item">
+                        <a href="/">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/about">
+                            <i class="fa-solid fa-user"></i>
+                            <span>À propos</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/projects">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Projets</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li class="menu-item menu-item-highlight">
+                        <a href="/store">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                            <span>Boutique</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ============================================
+     MAIN CONTENT AREA
+     (Content from individual pages goes here)
+     ============================================ -->
+
+<main id="main-content" class="site-main" role="main">
+
+<style>
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-slate-200);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4) 0;
+}
+
+/* Site Branding */
+.site-branding {
+    flex-shrink: 0;
+}
+
+.site-title {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.site-name {
+    font-family: var(--font-family-heading);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-slate-900);
+    line-height: 1;
+}
+
+.site-tagline {
+    font-family: var(--font-family-base);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-blue-600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-family-base);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-slate-600);
+    text-decoration: none;
+    border-radius: var(--radius-default);
+    transition: all var(--transition-base) var(--ease-in-out);
+}
+
+.menu-item a:hover,
+.menu-item.current-menu-item a {
+    color: var(--color-blue-600);
+    background-color: var(--color-blue-50);
+}
+
+.menu-item i {
+    font-size: var(--text-sm);
+}
+
+/* Highlighted Menu Item (Store) */
+.menu-item-highlight a {
+    background-color: var(--color-purple-600);
+    color: var(--color-white);
+}
+
+.menu-item-highlight a:hover {
+    background-color: var(--color-purple-700);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-slate-900);
+    transition: all var(--transition-base) var(--ease-in-out);
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1023px) {
+    .mobile-menu-toggle {
+        display: block;
+        z-index: var(--z-fixed);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: var(--space-20) var(--space-6);
+        box-shadow: var(--shadow-2xl);
+        transition: right var(--transition-medium) var(--ease-in-out);
+        z-index: var(--z-modal);
+    }
+
+    .nav-menu.is-open {
+        right: 0;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .menu-item a {
+        width: 100%;
+        padding: var(--space-3) var(--space-4);
+        font-size: var(--text-base);
+    }
+
+    /* Hamburger Animation */
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Mobile Menu Backdrop */
+    .nav-menu.is-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-name {
+        font-size: var(--text-lg);
+    }
+
+    .site-tagline {
+        font-size: 10px;
+    }
+}
+</style>
+
+<script>
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            const isOpen = navMenu.classList.contains('is-open');
+            
+            if (isOpen) {
+                navMenu.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                navMenu.classList.add('is-open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!menuToggle.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+});
+</script>
